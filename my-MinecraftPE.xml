@@ -1,0 +1,81 @@
+<Container version="2">
+<Name>MinecraftPE</Name>
+<Repository>ixilon/nukkit</Repository>
+<Registry/>
+<Network>bridge</Network>
+<Privileged>false</Privileged>
+<Support>https://hub.docker.com/r/ixilon/nukkit/</Support>
+<Overview>
+Nukkit is a Nuclear-Powered Server Software For Minecraft Pocket Edition
+
+VERY IMPORTANT:
+ 
+ First run use Screen on Uraid
+ docker exec -ti MinecraftPE /bin/bash
+ 
+ Run command :
+ java -jar /nukkit-1.0-SNAPSHOT.jar
+ select language
+ 
+ after the first run everything should work fine
+</Overview>
+<Category>MediaServer:Other</Category>
+<WebUI/>
+<TemplateURL/>
+<Icon/>
+<ExtraParams>-ti</ExtraParams>
+<DateInstalled>1489080522</DateInstalled>
+<Description>
+Nukkit is a Nuclear-Powered Server Software For Minecraft Pocket Edition
+
+VERY IMPORTANT:
+ 
+ First run use Screen on Uraid
+ docker exec -ti MinecraftPE /bin/bash
+ 
+ Run command :
+ java -jar /nukkit-1.0-SNAPSHOT.jar
+ select language
+ 
+ after the first run everything should work fine
+</Description>
+<Networking>
+<Mode>bridge</Mode>
+<Publish>
+<Port>
+<HostPort>19132</HostPort>
+<ContainerPort>19132</ContainerPort>
+<Protocol>udp</Protocol>
+</Port>
+</Publish>
+</Networking>
+<Data>
+<Volume>
+<HostDir>/mnt/cache/appdata/minecraftpe</HostDir>
+<ContainerDir>/srv/nukkit/</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+</Data>
+<Environment>
+<Variable>
+<Value>en_US.UTF-8</Value>
+<Name>LANGUAGE</Name>
+<Mode/>
+</Variable>
+<Variable>
+<Value>en_US.UTF-8</Value>
+<Name>LC_ALL</Name>
+<Mode/>
+</Variable>
+<Variable>
+<Value>America/Denver</Value>
+<Name>TZ</Name>
+<Mode/>
+</Variable>
+</Environment>
+<Config Name="Host Path 1" Target="/srv/nukkit/" Default="/mnt/user/appdata/minecraftpe" Mode="rw" Description="Container Path: /srv/nukkit/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/minecraftpe</Config>
+<Config Name="Host Port 1" Target="19132" Default="19132" Mode="udp" Description="Container Port: 19132" Type="Port" Display="always" Required="true" Mask="false">19132</Config>
+<Config Name="Language" Target="LANGUAGE" Default="en_US.UTF-8" Mode="" Description="Container Variable: LANGUAGE" Type="Variable" Display="always" Required="true" Mask="false">en_US.UTF-8</Config>
+<Config Name="LC_ALL" Target="LC_ALL" Default="en_US.UTF-8" Mode="" Description="Container Variable: LC_ALL" Type="Variable" Display="always" Required="true" Mask="false">en_US.UTF-8</Config>
+<Config Name="Time Zone" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">America/Denver</Config>
+</Container>
