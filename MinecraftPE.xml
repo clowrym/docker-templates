@@ -8,19 +8,19 @@
 <Overview>
 Nukkit is a Nuclear-Powered Server Software For Minecraft Pocket Edition[br][br]
 
-VERY IMPORTANT:[br][br]
- 
- First run use Screen on Uraid[br][br]
+VERY IMPORTANT:[br]
+ First run use Screen on Uraid[br]
  docker exec -ti MinecraftPE /bin/bash[br][br]
  
- Run command :[br][br]
- java -jar /nukkit-1.0-SNAPSHOT.jar[br][br]
+ Run command :[br]
+ java -jar /nukkit-1.0-SNAPSHOT.jar[br]
  select language[br][br]
  
  after the first run everything should work fine[br][br]
 
- To Interact with Server adminstration,[br][br]
- use "docker attach MincraftPE" at command promt
+ To Interact with Server / adminstration,[br]
+ use "docker attach MincraftPE" at command promt[br]
+ Press control-c to exit
 </Overview>
 <Category>MediaServer:Other</Category>
 <WebUI/>
