@@ -1,7 +1,7 @@
 <Container version="2">
 <Name>MinecraftPE</Name>
 <Repository>ixilon/nukkit</Repository>
-<Registry/>
+<Registry>https://hub.docker.com/r/ixilon/nukkit/</Registry>
 <Network>bridge</Network>
 <Privileged>false</Privileged>
 <Support>https://hub.docker.com/r/ixilon/nukkit/</Support>
