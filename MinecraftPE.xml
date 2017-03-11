@@ -19,7 +19,7 @@ VERY IMPORTANT:[br]
  after the first run everything should work fine[br][br]
 
  To Interact with Server / adminstration,[br]
- use "docker attach MincraftPE" at command promt[br]
+ use "docker attach MinecraftPE" at command promt[br]
  Press control-c to exit
 </Overview>
 <Category>MediaServer:Other</Category>
