@@ -21,7 +21,7 @@ Minecraft Ports (10 by default): 25565-25575[br]&#xD;
 Container Path: /var/games/minecraft[br]&#xD;
 Storage Path (optional for faster server back-ups if using plugins like dynmap):  /mnt/data&#xD;
 [br]&#xD;
-Ubuntu, latest commit&#xD;
+Ubuntu, latest commit By Hexparrot&#xD;
 </Overview>
   <Category/>
   <WebUI>https://[IP]:[PORT:8443]</WebUI>
