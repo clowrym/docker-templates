@@ -20,7 +20,7 @@ VERY IMPORTANT:[br]
 
  To Interact with Server / adminstration,[br]
  use "docker attach MinecraftPE" at command promt[br]
- Press control-c to exit
+ Press ctrl-p-ctrl-q to exit without shutting down the server
 </Overview>
 <Category>MediaServer:Other</Category>
 <WebUI/>
