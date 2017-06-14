@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>MineOS-node(Ubuntu)</Name>
+  <Name>MineOS-node</Name>
   <Repository>clowrym/mineos-docker</Repository>
   <Registry>https://hub.docker.com/r/clowrym/mineos-docker/</Registry>
   <Network>bridge</Network>
