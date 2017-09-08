@@ -40,7 +40,7 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:9091]/</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/activ/docker-templates/master/activ/images/transmission-icon.png</Icon>
+  <Icon>https://i.imgur.com/vLsgHcp.png</Icon>
   <ExtraParams> --restart=always --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
   <DateInstalled>1504896605</DateInstalled>
   <Description>Docker container which runs Transmission torrent client with WebUI while connecting to OpenVPN.[br]&#xD;
