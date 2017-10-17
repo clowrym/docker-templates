@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/clowrym/mineos-docker/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.lime-technology.com/topic/60143-support-clowryms-docker-repository/?tab=comments#comment-591570</Support>
   <Overview>MineOS is a server front-end to ease managing Minecraft administrative tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based), by leveraging the event-triggering, asyncronous model of Node.JS and websockets.[br]&#xD;
 [br]&#xD;
 This allows the front-end to provide system health, disk and memory usage, and logging in real-time.&#xD;
