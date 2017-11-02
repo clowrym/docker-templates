@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <MyIP/>
   <Privileged>true</Privileged>
-  <Support>https://github.com/haugene/docker-transmission-openvpn</Support>
+  <Support>https://forums.lime-technology.com/topic/60143-support-clowryms-docker-repository/?tab=comments#comment-599962</Support>
   <Overview>Docker container which runs Transmission torrent client with WebUI while connecting to OpenVPN.[br]&#xD;
 When using PIA as provider it will update Transmission hourly with assigned open port. Please read the instructions below."[br][br]&#xD;
 You must set the environment variables OPENVPN_PROVIDER, OPENVPN_USERNAME and OPENVPN_PASSWORD to provide basic connection details.[br][br]&#xD;
