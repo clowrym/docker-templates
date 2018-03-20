@@ -200,6 +200,6 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
   <Config Name="Trans_Option_Download Dir" Target="TRANSMISSION_DOWNLOAD_DIR" Default="" Mode="" Description="Container Variable: TRANSMISSION_DOWNLOAD_DIR" Type="Variable" Display="always" Required="false" Mask="false">/downloads</Config>
   <Config Name="TRANSMISSION_RPC_AUTHENTICATION_REQUIRED" Target="TRANSMISSION_RPC_AUTHENTICATION_REQUIRED" Default="true|false" Mode="" Description="Container Variable: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="RATIO LIMIT" Target="TRANSMISSION_RATIO_LIMIT" Default="1.1" Mode="" Description="Transmission Ratio" Type="Variable" Display="always" Required="false" Mask="false">1.1</Config>
-  <Config Name="RATIO_LIMIT_ENABLED" Target="TRANSMISSION_RATIO_LIMIT_ENABLED" Default="true|False" Mode="" Description="Enable Ratio Limits" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="RATIO_LIMIT_ENABLED" Target="TRANSMISSION_RATIO_LIMIT_ENABLED" Default="true|false" Mode="" Description="Enable Ratio Limits" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/cache/appdata/activ-transmissionvpn" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/cache/appdata/transmission/</Config>
 </Container>
