@@ -118,7 +118,7 @@ Commands[br][br]&#xD;
   <Config Name="DISCORD_BOT_USERNAME" Target="DISCORD_BOT_USERNAME" Default="Username" Mode="" Description="Container Variable: DISCORD_BOT_USERNAME" Type="Variable" Display="always" Required="true" Mask="false">username</Config>
   <Config Name="DISCORD_BOT_TOKEN" Target="DISCORD_BOT_TOKEN" Default="Token" Mode="" Description="Container Variable: DISCORD_BOT_TOKEN" Type="Variable" Display="always" Required="true" Mask="false">token</Config>
   <Config Name="PLEX_LOCAL_IP" Target="PLEX_LOCAL_IP" Default="" Mode="" Description="Container Variable: PLEX_LOCAL_IP" Type="Variable" Display="always" Required="true" Mask="false">Local IP</Config>
-  <Config Name="PLEX_LOCAL_PORT" Target="PLEX_LOCAL_PORT" Default="32400" Mode="tcp" Description="Container Path: PLEX_LOCAL_PORT" Type="Port" Display="always" Required="true" Mask="false">Local Port</Config>
+  <Config Name="PLEX_LOCAL_PORT" Target="PLEX_LOCAL_PORT" Default="32400" Mode="tcp" Description="Container Port: PLEX_LOCAL_PORT" Type="Port" Display="always" Required="true" Mask="false">Local Port</Config>
   <Config Name="PLEX_USERNAME" Target="PLEX_USERNAME" Default="" Mode="" Description="Container Variable: PLEX_USERNAME" Type="Variable" Display="always" Required="true" Mask="false">Username</Config>
   <Config Name="PLEX_PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="Container Variable: PLEX_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">Password</Config>
   <Config Name="PLEX_TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="Container Variable: PLEX_TOKEN" Type="Variable" Display="always" Required="true" Mask="false">Token</Config>
