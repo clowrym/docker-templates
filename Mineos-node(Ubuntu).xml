@@ -23,7 +23,7 @@ Storage Path (optional for faster server back-ups if using plugins like dynmap):
 [br]&#xD;
 Ubuntu, latest commit By Hexparrot&#xD;
 </Overview>
-  <Category/>
+  <Category>GameServers:</Category>
   <WebUI>https://[IP]:[PORT:8443]</WebUI>
   <TemplateURL/>
   <Icon>http://vignette2.wikia.nocookie.net/lotr-minecraft-mod-exiles/images/f/f2/Minecraft_server_setup.png/revision/latest?cb=20160911172557</Icon>
