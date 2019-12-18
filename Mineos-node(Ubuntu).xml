@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>MineOS-node</Name>
-  <Repository>clowrym/mineos-docker</Repository>
+  <Repository>hexparrot/mineos</Repository>
   <Registry>https://hub.docker.com/r/clowrym/mineos-docker/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
