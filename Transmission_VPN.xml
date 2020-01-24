@@ -182,6 +182,31 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
       <Mode/>
     </Variable>
   </Environment>
+  <Variable>
+      <Value>15</Value>
+      <Name>TRANSMISSION_DOWNLOAD_QUEUE_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10</Value>
+      <Name>TRANSMISSION_CACHE_SIZE_MB</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/downloads/incomplete</Value>
+      <Name>TRANSMISSION_INCOMPLETE_DIR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>transmission-web-control</Value>
+      <Name>TRANSMISSION_WEB_UI</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>GLOBAL_APPLY_PERMISSIONS</Name>
+      <Mode/>
+    </Variable>
   <Config Name="Host Port 1" Target="9091" Default="9091" Mode="tcp" Description="Container Port: 9091" Type="Port" Display="always" Required="true" Mask="false">9091</Config>
   <Config Name="Host Path 2" Target="/data" Default="path for downloads" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/T_Media/Torrent/</Config>
   <Config Name="Key 2" Target="OPENVPN_USERNAME" Default="vpn username" Mode="" Description="Container Variable: OPENVPN_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">Username</Config>
@@ -201,5 +226,11 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
   <Config Name="TRANSMISSION_RPC_AUTHENTICATION_REQUIRED" Target="TRANSMISSION_RPC_AUTHENTICATION_REQUIRED" Default="true|false" Mode="" Description="Container Variable: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="RATIO LIMIT" Target="TRANSMISSION_RATIO_LIMIT" Default="1.1" Mode="" Description="Transmission Ratio" Type="Variable" Display="always" Required="false" Mask="false">1.1</Config>
   <Config Name="RATIO_LIMIT_ENABLED" Target="TRANSMISSION_RATIO_LIMIT_ENABLED" Default="true|false" Mode="" Description="Enable Ratio Limits" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="TRANSMISSION_DOWNLOAD_QUEUE_SIZE" Target="TRANSMISSION_DOWNLOAD_QUEUE_SIZE" Default="10" Mode="" Description="Container Variable: TRANSMISSION_DOWNLOAD_QUEUE_SIZE" Type="Variable" Display="always" Required="false" Mask="false">15</Config>
+  <Config Name="TRANSMISSION_CACHE_SIZE_MB" Target="TRANSMISSION_CACHE_SIZE_MB" Default="10" Mode="" Description="Container Variable: TRANSMISSION_CACHE_SIZE_MB" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
+  <Config Name="TRANSMISSION_INCOMPLETE_DIR" Target="TRANSMISSION_INCOMPLETE_DIR" Default="/downloads/incomplete" Mode="" Description="Container Variable: TRANSMISSION_INCOMPLETE_DIR" Type="Variable" Display="always" Required="false" Mask="false">/downloads/incomplete</Config>
+  <Config Name="Download" Target="/mnt/user/T_Media/Torrent/" Default="/mnt/user/T_Media/Torrent/" Mode="rw" Description="Container Path: /mnt/user/T_Media/Torrent/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/T_Media/Torrent/</Config>
+  <Config Name="WEB_GUI" Target="TRANSMISSION_WEB_UI" Default="transmission-web-control|kettu|combustion" Mode="" Description="Web UI Options" Type="Variable" Display="always" Required="false" Mask="false">transmission-web-control</Config>
+  <Config Name="GLOBAL_APPLY_PERMISSIONS" Target="GLOBAL_APPLY_PERMISSIONS" Default="true|false" Mode="" Description="Apply permsissions Globally on Transmissions files / Folders" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/cache/appdata/activ-transmissionvpn" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/cache/appdata/transmission/</Config>
 </Container>
