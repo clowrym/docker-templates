@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Transmission_VPN</Name>
-  <Repository>haugene/transmission-openvpn</Repository>
+  <Name>Transmission_VPN_V3_testing</Name>
+  <Repository>haugene/transmission-openvpn:dev</Repository>
   <Registry>https://hub.docker.com/r/haugene/transmission-openvpn/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>true</Privileged>
-  <Support>https://github.com/haugene/docker-transmission-openvpn</Support>
-  <Project/>
+  <Support>https://forums.unraid.net/topic/60143-support-clowryms-docker-repository/</Support>
+  <Project>https://github.com/haugene/docker-transmission-openvpn</Project>
   <Overview>&#xD;
     Transmission is a full-featured &#x200B;BitTorrent client for Linux, OS X, Unix and Windows.[br]&#xD;
     This Docker includes OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites, to use Privoxy please point your application at "host ip:8118"[br][br]&#xD;
@@ -26,7 +26,7 @@
   <ExtraParams> --cap-add=NET_ADMIN --restart=always --log-opt max-size=50m --log-driver json-file --dns 8.8.8.8 --dns 1.1.1.1</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1606270060</DateInstalled>
+  <DateInstalled>1606270517</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>&#xD;
@@ -73,12 +73,12 @@
   </Data>
   <Environment>
     <Variable>
-      <Value>VPN_user</Value>
+      <Value>VPN_USER</Value>
       <Name>OPENVPN_USERNAME</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>VPN_pass</Value>
+      <Value>VPN_PASS</Value>
       <Name>OPENVPN_PASSWORD</Name>
       <Mode/>
     </Variable>
@@ -103,7 +103,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>TRANS_pass</Value>
+      <Value>TRANS_PASS</Value>
       <Name>TRANSMISSION_RPC_PASSWORD</Name>
       <Mode/>
     </Variable>
@@ -176,13 +176,13 @@
   <Labels/>
   <Config Name="Host Port 1" Target="9091" Default="9091" Mode="tcp" Description="Container Port: 9091" Type="Port" Display="always" Required="true" Mask="false">9091</Config>
   <Config Name="Host Path 2" Target="/data" Default="path for downloads" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/T_Media/Torrent/</Config>
-  <Config Name="Key 2" Target="OPENVPN_USERNAME" Default="vpn username" Mode="" Description="Container Variable: OPENVPN_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">VPN_User</Config>
-  <Config Name="Key 3" Target="OPENVPN_PASSWORD" Default="vpn password" Mode="" Description="Container Variable: VPN_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">VPN_Pass</Config>
+  <Config Name="Key 2" Target="OPENVPN_USERNAME" Default="vpn username" Mode="" Description="Container Variable: OPENVPN_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">VPN_USER</Config>
+  <Config Name="Key 3" Target="OPENVPN_PASSWORD" Default="vpn password" Mode="" Description="Container Variable: VPN_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">VPN_PASSWORD</Config>
   <Config Name="OPENVPN_CONFIG" Target="OPENVPN_CONFIG" Default="au_melbourne|au_sydney|brazil|ca_north_York|ca_toronto|denmark|finland|france|germany|hong_kong|india|ireland|israel|italy|japan|mexico|netherlands|new_zealand|norway|romania|singapore|sweden|switzerland|turkey|uk_london|uk_southampton|us_california|us_east|us_florida|us_midwest|us_new_york_city|us_seattle|us_silicon_valley|us_texas|us_west|default|" Mode="" Description="OPENVPN_CONFIG" Type="Variable" Display="always" Required="false" Mask="false">switzerland</Config>
   <Config Name="OPENVPN_PROVIDER" Target="OPENVPN_PROVIDER" Default="ANONINE|BTGUARD|CRYPTOSTORM|FROOT|FROSTVPN|GIGANEWS|HIDEME|HIDEMYASS|INTEGRITYVPN|IPREDATOR|IPVANISH|IVACY|IVPN|NEWSHOSTING|NORDVPN|OVPN|PIA|PRIVATEVPN|PROXPN|PUREVPN|RA4W|SLICKVPN|SMARTVPNTIGER|TORGUARD|USENETSERVER|WINDSCRIBE|VPNHT|VPNBOOK|VPNTUNNEL|VYPRVPN|" Mode="" Description="Container Variable: OPENVPN_PROVIDER" Type="Variable" Display="always" Required="false" Mask="false">PIA</Config>
   <Config Name="LOCAL_NETWORK" Target="LOCAL_NETWORK" Default="" Mode="" Description="Container Variable: LOCAL_NETWORK" Type="Variable" Display="always" Required="false" Mask="false">192.168.0.0/24</Config>
-  <Config Name="Transmission_Username" Target="TRANSMISSION_RPC_USERNAME" Default="admin" Mode="" Description="Container Variable: RPC_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">Trans_user</Config>
-  <Config Name="Transmission_Password" Target="TRANSMISSION_RPC_PASSWORD" Default="password" Mode="" Description="Container Variable: RPC_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">trans_pass</Config>
+  <Config Name="Transmission_Username" Target="TRANSMISSION_RPC_USERNAME" Default="admin" Mode="" Description="Container Variable: RPC_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">TRANS_USER</Config>
+  <Config Name="Transmission_Password" Target="TRANSMISSION_RPC_PASSWORD" Default="password" Mode="" Description="Container Variable: RPC_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">TRANS_PASSWORD</Config>
   <Config Name="OpenVPN_OPTIONS" Target="OPENVPN_OPTS" Default="" Mode="" Description="--inactive 3600 --ping 10 --ping-exit 60 --restart=always" Type="Variable" Display="always" Required="false" Mask="false">--inactive 3600 --ping 10 --ping-exit 60 --mute-replay-warnings</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
