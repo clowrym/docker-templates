@@ -5,73 +5,39 @@
   <Registry>https://hub.docker.com/r/haugene/transmission-openvpn/</Registry>
   <Network>bridge</Network>
   <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>true</Privileged>
-  <Support>https://forums.lime-technology.com/topic/60143-support-clowryms-docker-repository/?tab=comments#comment-599962</Support>
-  <Overview>Docker container which runs Transmission torrent client with WebUI while connecting to OpenVPN.[br]&#xD;
-When using PIA as provider it will update Transmission hourly with assigned open port. Please read the instructions below."[br][br]&#xD;
-You must set the environment variables OPENVPN_PROVIDER, OPENVPN_USERNAME and OPENVPN_PASSWORD to provide basic connection details.[br][br]&#xD;
-Required environment options[br]&#xD;
-Variable	                                Function	                                        Example[br][br]&#xD;
-[b]OPENVPN_PROVIDER[/b]      Sets the OpenVPN provider to use.	OPENVPN_PROVIDER=provider. All Providers are listed in the Drop Down[br] &#xD;
-[b]OPENVPN_USERNAME[/b][br]	Your OpenVPN username	OPENVPN_USERNAME=asdf[br][br]&#xD;
-[b]OPENVPN_PASSWORD[/b][br]	Your OpenVPN password	OPENVPN_PASSWORD=asdf[br][br]&#xD;
-&#xD;
-Network configuration options[br]&#xD;
-Variable	                            Function	                                                      Example[br]&#xD;
-[b]OPENVPN_CONFIG[/b]	Sets the OpenVPN endpoint to connect to.	        OPENVPN_CONFIG=UK Southampton[br]&#xD;
-[b][span style='color: #E80000;']The container is Currently set up for PIA Endpoints. Please change the Default Variable in OPENVPN_CONFIG to the Variables listed in the appropriate folders for whatever VPN you are using here: https://github.com/haugene/docker-transmission-openvpn/tree/master/openvpn [/span][/b][br][br]&#xD;
-&#xD;
-[b]OPENVPN_OPTS[/b]	        Will be passed to OpenVPN on startup	                 See OpenVPN doc[br]&#xD;
-[b]LOCAL_NETWORK[/b]	Sets the local network that should have access.	LOCAL_NETWORK=192.168.0.0/24[br]&#xD;
-&#xD;
-Firewall configuration options[br][br]&#xD;
-When enabled, the firewall blocks everything except traffic to the peer port and traffic to the rpc port from the LOCAL_NETWORK and the internal docker gateway.[br][br]&#xD;
-&#xD;
-If TRANSMISSION_PEER_PORT_RANDOM_ON_START is enabled then it allows traffic to the range of peer ports defined by TRANSMISSION_PEER_PORT_RANDOM_HIGH and TRANSMISSION_PEER_PORT_RANDOM_LOW.[br][br]&#xD;
-&#xD;
-Transmission configuration options[br]&#xD;
-You may override transmission options by setting the appropriate environment variable .[br]&#xD;
-optional Variables listed here: https://github.com/haugene/docker-transmission-openvpn/blob/master/transmission/environment-variables.tmpl[br][br]&#xD;
-EXAMPLE:[br][br]&#xD;
-Transmission variable name: [b]speed-limit-up[/b][br]&#xD;
-Environment variable name: [b]TRANSMISSION_SPEED_LIMIT_UP[/b][br]&#xD;
-As you can see the variables are prefixed with TRANSMISSION_, the variable is capitalized, and - is converted to _.&#xD;
+  <Support>https://github.com/haugene/docker-transmission-openvpn</Support>
+  <Project/>
+  <Overview>&#xD;
+    Transmission is a full-featured &#x200B;BitTorrent client for Linux, OS X, Unix and Windows.[br]&#xD;
+    This Docker includes OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites, to use Privoxy please point your application at "host ip:8118"[br][br]&#xD;
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
+    [b]/config[/b] This is where Transmission will store it's configuration file, database and logs.[br]&#xD;
+    [b]/data[/b] This is where Transmision will store data downloaded, watched folder, and archived torrents.[br][br]&#xD;
+    [b][span style='color: #E80000;']Notes[/span][/b][br]&#xD;
+    For help on configuration for PIA, AirVPN and custom VPN providers please go here http://lime-technology.com/forum/index.php?topic=45812.msg437678#msg437678[br]&#xD;
+    IMPORTANT - To allow access to the Transmission webui, Privoxy and Transmission deamon you need to specify you LAN network, using CIDR notation for the mask, a subnet mask of 255.255.255.0 would equate to CIDR /24, 255.255.0.0 would equate to CIDR /16.&#xD;
   </Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:9091]/</WebUI>
   <TemplateURL/>
-  <Icon>https://i.imgur.com/vLsgHcp.png</Icon>
-  <ExtraParams> --restart=always --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
-  <DateInstalled>1504896605</DateInstalled>
-  <Description>Docker container which runs Transmission torrent client with WebUI while connecting to OpenVPN.[br]&#xD;
-When using PIA as provider it will update Transmission hourly with assigned open port. Please read the instructions below."[br][br]&#xD;
-You must set the environment variables OPENVPN_PROVIDER, OPENVPN_USERNAME and OPENVPN_PASSWORD to provide basic connection details.[br][br]&#xD;
-Required environment options[br]&#xD;
-Variable	                                Function	                                        Example[br][br]&#xD;
-[b]OPENVPN_PROVIDER[/b]      Sets the OpenVPN provider to use.	OPENVPN_PROVIDER=provider. All Providers are listed in the Drop Down[br] &#xD;
-[b]OPENVPN_USERNAME[/b][br]	Your OpenVPN username	OPENVPN_USERNAME=asdf[br][br]&#xD;
-[b]OPENVPN_PASSWORD[/b][br]	Your OpenVPN password	OPENVPN_PASSWORD=asdf[br][br]&#xD;
-&#xD;
-Network configuration options[br]&#xD;
-Variable	                            Function	                                                      Example[br]&#xD;
-[b]OPENVPN_CONFIG[/b]	Sets the OpenVPN endpoint to connect to.	        OPENVPN_CONFIG=UK Southampton[br]&#xD;
-[b][span style='color: #E80000;']The container is Currently set up for PIA Endpoints. Please change the Default Variable in OPENVPN_CONFIG to the Variables listed in the appropriate folders for whatever VPN you are using here: https://github.com/haugene/docker-transmission-openvpn/tree/master/openvpn [/span][/b][br][br]&#xD;
-&#xD;
-[b]OPENVPN_OPTS[/b]	        Will be passed to OpenVPN on startup	                 See OpenVPN doc[br]&#xD;
-[b]LOCAL_NETWORK[/b]	Sets the local network that should have access.	LOCAL_NETWORK=192.168.0.0/24[br]&#xD;
-&#xD;
-Firewall configuration options[br][br]&#xD;
-When enabled, the firewall blocks everything except traffic to the peer port and traffic to the rpc port from the LOCAL_NETWORK and the internal docker gateway.[br][br]&#xD;
-&#xD;
-If TRANSMISSION_PEER_PORT_RANDOM_ON_START is enabled then it allows traffic to the range of peer ports defined by TRANSMISSION_PEER_PORT_RANDOM_HIGH and TRANSMISSION_PEER_PORT_RANDOM_LOW.[br][br]&#xD;
-&#xD;
-Transmission configuration options[br]&#xD;
-You may override transmission options by setting the appropriate environment variable .[br]&#xD;
-optional Variables listed here: https://github.com/haugene/docker-transmission-openvpn/blob/master/transmission/environment-variables.tmpl[br][br]&#xD;
-EXAMPLE:[br][br]&#xD;
-Transmission variable name: [b]speed-limit-up[/b][br]&#xD;
-Environment variable name: [b]TRANSMISSION_SPEED_LIMIT_UP[/b][br]&#xD;
-As you can see the variables are prefixed with TRANSMISSION_, the variable is capitalized, and - is converted to _.&#xD;
+  <Icon>https://raw.githubusercontent.com/activ/docker-templates/master/activ/images/transmission-icon.png</Icon>
+  <ExtraParams> --cap-add=NET_ADMIN --restart=always --log-opt max-size=50m --log-driver json-file --dns 8.8.8.8 --dns 1.1.1.1</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1606270060</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+    Transmission is a full-featured &#x200B;BitTorrent client for Linux, OS X, Unix and Windows.[br]&#xD;
+    This Docker includes OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites, to use Privoxy please point your application at "host ip:8118"[br][br]&#xD;
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
+    [b]/config[/b] This is where Transmission will store it's configuration file, database and logs.[br]&#xD;
+    [b]/data[/b] This is where Transmision will store data downloaded, watched folder, and archived torrents.[br][br]&#xD;
+    [b][span style='color: #E80000;']Notes[/span][/b][br]&#xD;
+    For help on configuration for PIA, AirVPN and custom VPN providers please go here http://lime-technology.com/forum/index.php?topic=45812.msg437678#msg437678[br]&#xD;
+    IMPORTANT - To allow access to the Transmission webui, Privoxy and Transmission deamon you need to specify you LAN network, using CIDR notation for the mask, a subnet mask of 255.255.255.0 would equate to CIDR /24, 255.255.0.0 would equate to CIDR /16.&#xD;
   </Description>
   <Networking>
     <Mode>bridge</Mode>
@@ -80,11 +46,6 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
         <HostPort>9091</HostPort>
         <ContainerPort>9091</ContainerPort>
         <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>1198</HostPort>
-        <ContainerPort>1198</ContainerPort>
-        <Protocol>udp</Protocol>
       </Port>
     </Publish>
   </Networking>
@@ -105,24 +66,24 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/transmission/</HostDir>
-      <ContainerDir>/config</ContainerDir>
+      <HostDir>/mnt/user/T_Media/Torrent/</HostDir>
+      <ContainerDir>/mnt/user/T_Media/Torrent/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>Username</Value>
+      <Value>VPN_user</Value>
       <Name>OPENVPN_USERNAME</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>Password</Value>
+      <Value>VPN_pass</Value>
       <Name>OPENVPN_PASSWORD</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>Switzerland</Value>
+      <Value>switzerland</Value>
       <Name>OPENVPN_CONFIG</Name>
       <Mode/>
     </Variable>
@@ -142,12 +103,12 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
       <Mode/>
     </Variable>
     <Variable>
-      <Value>password</Value>
+      <Value>TRANS_pass</Value>
       <Name>TRANSMISSION_RPC_PASSWORD</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>--inactive 3600 --ping 10 --ping-exit 60</Value>
+      <Value>--inactive 3600 --ping 10 --ping-exit 60 --mute-replay-warnings</Value>
       <Name>OPENVPN_OPTS</Name>
       <Mode/>
     </Variable>
@@ -172,17 +133,11 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
       <Mode/>
     </Variable>
     <Variable>
-      <Value>1.1</Value>
-      <Name>TRANSMISSION_RATIO_LIMIT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>true</Value>
       <Name>TRANSMISSION_RATIO_LIMIT_ENABLED</Name>
       <Mode/>
     </Variable>
-  </Environment>
-  <Variable>
+    <Variable>
       <Value>15</Value>
       <Name>TRANSMISSION_DOWNLOAD_QUEUE_SIZE</Name>
       <Mode/>
@@ -207,24 +162,34 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
       <Name>GLOBAL_APPLY_PERMISSIONS</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>WEBPROXY_ENABLED</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>openvpn-tcp</Value>
+      <Name>PIA_OPENVPN_CONFIG_BUNDLE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
   <Config Name="Host Port 1" Target="9091" Default="9091" Mode="tcp" Description="Container Port: 9091" Type="Port" Display="always" Required="true" Mask="false">9091</Config>
   <Config Name="Host Path 2" Target="/data" Default="path for downloads" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/T_Media/Torrent/</Config>
-  <Config Name="Key 2" Target="OPENVPN_USERNAME" Default="vpn username" Mode="" Description="Container Variable: OPENVPN_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">Username</Config>
-  <Config Name="Key 3" Target="OPENVPN_PASSWORD" Default="vpn password" Mode="" Description="Container Variable: VPN_PASS" Type="Variable" Display="always" Required="false" Mask="false">Password</Config>
-  <Config Name="OPENVPN_CONFIG" Target="OPENVPN_CONFIG" Default="AU Melbourne|AU Sydney|Brazil|CA North York|CA Toronto|Denmark|Finland|France|DE Berlin|DE Frankfurt||Hong Kong|India|Ireland|Israel|Italy|Japan|Mexico|Netherlands|New Zealand|Norway|Romania|Singapore|Sweden|Switzerland|Turkey|UK London|UK Southampton|US California|US East|US Florida|US Midwest|US New York City|US Seattle|US Silicon Valley|US Texas|US West|default|" Mode="" Description="OpenVPN config" Type="Variable" Display="always" Required="false" Mask="false">Switzerland</Config>
-  <Config Name="OPENVPN_PROVIDER" Target="OPENVPN_PROVIDER" Default="ANONINE|ANONVPN|BLACKVPN|BTGUARD|CRYPTOSTORM|CYPHERPUNK|FREEVPN|FROOT|FROSTVPN|GIGANEWS|HIDEME|HIDEMYASS|INTEGRITYVPN|IPREDATOR|IPVANISH|IRONSOCKET|IVACY|IVPN|MULLVAD|NEWSHOSTING|NORDVPN|OVPN|PRIVADO|PERFECTPRIVACY|PIA|PRIVATEVPN|PROTONVPN|PROXPN|PROXYSH|PUREVPN|RA4W|SAFERVPN|SLICKVPN|SMARTDNSPROXY|SMARTVPN|TIGER|TORGUARD|TRUSTZONE|TUNNELBEAR|USENETSERVER|WINDSCRIBE|VPNAREA|VPNAC|VPNHT|VPNBOOK|VPNFACILE|VPNTUNNEL|VYPRVPN|" Mode="" Description="Container Variable: OPENVPN_PROVIDER" Type="Variable" Display="always" Required="false" Mask="false">PIA</Config>
-  <Config Name="VPN_PORT" Target="1198" Default="" Mode="udp" Description="Container Port: 1198" Type="Port" Display="always" Required="false" Mask="false">1198</Config>
+  <Config Name="Key 2" Target="OPENVPN_USERNAME" Default="vpn username" Mode="" Description="Container Variable: OPENVPN_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">VPN_User</Config>
+  <Config Name="Key 3" Target="OPENVPN_PASSWORD" Default="vpn password" Mode="" Description="Container Variable: VPN_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">VPN_Pass</Config>
+  <Config Name="OPENVPN_CONFIG" Target="OPENVPN_CONFIG" Default="au_melbourne|au_sydney|brazil|ca_north_York|ca_toronto|denmark|finland|france|germany|hong_kong|india|ireland|israel|italy|japan|mexico|netherlands|new_zealand|norway|romania|singapore|sweden|switzerland|turkey|uk_london|uk_southampton|us_california|us_east|us_florida|us_midwest|us_new_york_city|us_seattle|us_silicon_valley|us_texas|us_west|default|" Mode="" Description="OPENVPN_CONFIG" Type="Variable" Display="always" Required="false" Mask="false">switzerland</Config>
+  <Config Name="OPENVPN_PROVIDER" Target="OPENVPN_PROVIDER" Default="ANONINE|BTGUARD|CRYPTOSTORM|FROOT|FROSTVPN|GIGANEWS|HIDEME|HIDEMYASS|INTEGRITYVPN|IPREDATOR|IPVANISH|IVACY|IVPN|NEWSHOSTING|NORDVPN|OVPN|PIA|PRIVATEVPN|PROXPN|PUREVPN|RA4W|SLICKVPN|SMARTVPNTIGER|TORGUARD|USENETSERVER|WINDSCRIBE|VPNHT|VPNBOOK|VPNTUNNEL|VYPRVPN|" Mode="" Description="Container Variable: OPENVPN_PROVIDER" Type="Variable" Display="always" Required="false" Mask="false">PIA</Config>
   <Config Name="LOCAL_NETWORK" Target="LOCAL_NETWORK" Default="" Mode="" Description="Container Variable: LOCAL_NETWORK" Type="Variable" Display="always" Required="false" Mask="false">192.168.0.0/24</Config>
-  <Config Name="Transmission_Username" Target="TRANSMISSION_RPC_USERNAME" Default="admin" Mode="" Description="Container Variable: RPC_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
-  <Config Name="Transmission_Password" Target="TRANSMISSION_RPC_PASSWORD" Default="password" Mode="" Description="Container Variable: RPC_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">password</Config>
-  <Config Name="OpenVPN_OPTIONS" Target="OPENVPN_OPTS" Default="" Mode="" Description="--inactive 3600 --ping 10 --ping-exit 60 --restart=always" Type="Variable" Display="always" Required="false" Mask="false">--inactive 3600 --ping 10 --ping-exit 60</Config>
+  <Config Name="Transmission_Username" Target="TRANSMISSION_RPC_USERNAME" Default="admin" Mode="" Description="Container Variable: RPC_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">Trans_user</Config>
+  <Config Name="Transmission_Password" Target="TRANSMISSION_RPC_PASSWORD" Default="password" Mode="" Description="Container Variable: RPC_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">trans_pass</Config>
+  <Config Name="OpenVPN_OPTIONS" Target="OPENVPN_OPTS" Default="" Mode="" Description="--inactive 3600 --ping 10 --ping-exit 60 --restart=always" Type="Variable" Display="always" Required="false" Mask="false">--inactive 3600 --ping 10 --ping-exit 60 --mute-replay-warnings</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="Download" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/T_Media/Torrent/</Config>
   <Config Name="Watch Folder" Target="/watch" Default="/mnt/user/T_Media/Torrent/watch/" Mode="rw" Description="Container Path: /watch" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/T_Media/Torrent/watch/</Config>
   <Config Name="Trans_Option_Download Dir" Target="TRANSMISSION_DOWNLOAD_DIR" Default="" Mode="" Description="Container Variable: TRANSMISSION_DOWNLOAD_DIR" Type="Variable" Display="always" Required="false" Mask="false">/downloads</Config>
   <Config Name="TRANSMISSION_RPC_AUTHENTICATION_REQUIRED" Target="TRANSMISSION_RPC_AUTHENTICATION_REQUIRED" Default="true|false" Mode="" Description="Container Variable: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="RATIO LIMIT" Target="TRANSMISSION_RATIO_LIMIT" Default="1.1" Mode="" Description="Transmission Ratio" Type="Variable" Display="always" Required="false" Mask="false">1.1</Config>
   <Config Name="RATIO_LIMIT_ENABLED" Target="TRANSMISSION_RATIO_LIMIT_ENABLED" Default="true|false" Mode="" Description="Enable Ratio Limits" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="TRANSMISSION_DOWNLOAD_QUEUE_SIZE" Target="TRANSMISSION_DOWNLOAD_QUEUE_SIZE" Default="10" Mode="" Description="Container Variable: TRANSMISSION_DOWNLOAD_QUEUE_SIZE" Type="Variable" Display="always" Required="false" Mask="false">15</Config>
   <Config Name="TRANSMISSION_CACHE_SIZE_MB" Target="TRANSMISSION_CACHE_SIZE_MB" Default="10" Mode="" Description="Container Variable: TRANSMISSION_CACHE_SIZE_MB" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
@@ -232,5 +197,6 @@ As you can see the variables are prefixed with TRANSMISSION_, the variable is ca
   <Config Name="Download" Target="/mnt/user/T_Media/Torrent/" Default="/mnt/user/T_Media/Torrent/" Mode="rw" Description="Container Path: /mnt/user/T_Media/Torrent/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/T_Media/Torrent/</Config>
   <Config Name="WEB_GUI" Target="TRANSMISSION_WEB_UI" Default="transmission-web-control|kettu|combustion" Mode="" Description="Web UI Options" Type="Variable" Display="always" Required="false" Mask="false">transmission-web-control</Config>
   <Config Name="GLOBAL_APPLY_PERMISSIONS" Target="GLOBAL_APPLY_PERMISSIONS" Default="true|false" Mode="" Description="Apply permsissions Globally on Transmissions files / Folders" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-  <Config Name="AppData Config Path" Target="/config" Default="/mnt/cache/appdata/activ-transmissionvpn" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/cache/appdata/transmission/</Config>
+  <Config Name="WebProxy" Target="WEBPROXY_ENABLED" Default="false" Mode="" Description="Container Path: WEBPROXY_ENABLED" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="PIA_OPENVPN_CONFIG_BUNDLE=openvpn-tcp-nextgen" Target="PIA_OPENVPN_CONFIG_BUNDLE" Default="openvpn-tcp|openvpn|openvpn-strong|openvpn-strong-tcp" Mode="" Description="testing openvpn-tcp-nextgen" Type="Variable" Display="always" Required="false" Mask="false">openvpn-tcp</Config>
 </Container>
