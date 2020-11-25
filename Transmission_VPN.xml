@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Transmission_VPN_V3_testing</Name>
+  <Name>Transmission_VPN</Name>
   <Repository>haugene/transmission-openvpn:dev</Repository>
   <Registry>https://hub.docker.com/r/haugene/transmission-openvpn/</Registry>
   <Network>bridge</Network>
