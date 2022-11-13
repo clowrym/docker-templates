@@ -22,7 +22,7 @@ VERY IMPORTANT:[br]
  use "docker attach MinecraftPE" at command promt[br]
  Press ctrl-p-ctrl-q to exit without shutting down the server
 </Overview>
-<Category>MediaServer:Other</Category>
+<Category>MediaServer:Other GameServers:</Category>
 <WebUI/>
 <TemplateURL/>
 <Icon>http://i.imgur.com/zn0eOhH.png</Icon>
